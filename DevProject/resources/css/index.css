@@ -1,0 +1,73 @@
+/* * {
+    font-family: Helvetica, Arial, sans-serif;
+  }
+   
+   
+  h1 {
+    color: SeaGreen;
+  }
+   
+   
+  p, 
+  li {
+    font-size: 18px;
+  }
+   
+   
+  a {
+    text-decoration: none;
+  }*/
+
+  h1 {
+    font-family: Helvetica;
+    font-size: 100px;
+    font-weight: bold;
+    color: khaki;
+    background-image: url("../image/pattern.jpg");
+    text-align: center;
+  }
+
+  h2.brushes {
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    background-color: mediumspringgreen;
+    text-align: left;
+  }
+
+  h3 {
+    font-family: Helvetica;
+    text-align: left;
+    font-weight: bold;
+    color: black;
+  }
+  
+  P {
+    text-align: left;
+    color: black;
+    font-family: "Helvetica", sans-serif;
+  }
+
+  .price {
+    color: Blue;
+    font-weight: bold;
+  }
+
+  h2.frames {
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    background-color: lightcoral;
+    text-align: left;
+  }
+
+  h2.paint {
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    background-color: skyblue;
+    text-align: left;
+  }
