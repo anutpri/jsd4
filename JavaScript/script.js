@@ -51,3 +51,10 @@
 // console.log(user.fristName,user.lastName);
 // console.log(user.skill);
 // console.log(user.skill[3]);
+
+
+
+const password = '1234';
+
+password.length >= 12 ? console.log('Password is very strong') :
+(password.length >= 8 ? console.log('WELCOME'): console.log('Sorry the password is too short') );
