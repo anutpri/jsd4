@@ -77,8 +77,16 @@
 
 //   info('Jack');
 
-  const addnumber = (a,b) => {
-    return a + b;
-  }
+//   const addnumber = (a,b) => {
+//     return a + b;
+//   }
 
-  console.log(addnumber(5,3));
+//   console.log(addnumber(5,3));
+
+
+  const myFunction = (a,b) => a*b;
+
+  let x = myFunction(5,3);
+  let y = x;
+
+  console.log(x);
