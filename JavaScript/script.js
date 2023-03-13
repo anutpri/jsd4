@@ -54,7 +54,31 @@
 
 
 
-const password = '1234';
+// const password = '1234';
 
-password.length >= 12 ? console.log('Password is very strong') :
-(password.length >= 8 ? console.log('WELCOME'): console.log('Sorry the password is too short') );
+// password.length >= 12 ? console.log('Password is very strong') :
+// (password.length >= 8 ? console.log('WELCOME'): console.log('Sorry the password is too short') );
+
+// const plantNeedsWater = (day) => {
+//     if (day === 'Wednesday') {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   };
+  
+//   console.log(plantNeedsWater('Wednesday'));
+
+
+
+//   const info = (name) => {
+//     console.log("Hello " + name);
+//   }
+
+//   info('Jack');
+
+  const addnumber = (a,b) => {
+    return a + b;
+  }
+
+  console.log(addnumber(5,3));
