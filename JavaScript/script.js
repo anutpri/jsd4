@@ -66,7 +66,7 @@
 //       return false;
 //     }
 //   };
-  
+ // const plantNeedsWater = day => day === 'Wednesday' ? true : false;
 //   console.log(plantNeedsWater('Wednesday'));
 
 
@@ -84,9 +84,28 @@
 //   console.log(addnumber(5,3));
 
 
-  const myFunction = (a,b) => a*b;
+  // const myFunction = (a,b) => a*b;
 
-  let x = myFunction(5,3);
-  let y = x;
+  // let x = myFunction(5,3);
+  // let y = x;
 
-  console.log(x);
+  // console.log(x);
+
+
+
+
+  // function monitorCount(rows, columns) {
+  //   return rows * columns;
+  // }
+  
+  // function costOfMonitors(rows, columns) {
+  //   return monitorCount(rows, columns) * 200
+  // }
+  
+  // const totalCost = costOfMonitors(5, 4);
+  // console.log(totalCost);
+
+  const totalCost = (rows, columns, costOfMonitors) => (rows*columns) * costOfMonitors;
+
+  console.log(totalCost(5,4,200));
+    
