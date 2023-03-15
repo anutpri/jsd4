@@ -105,7 +105,45 @@
   // const totalCost = costOfMonitors(5, 4);
   // console.log(totalCost);
 
-  const totalCost = (rows, columns, costOfMonitors) => (rows*columns) * costOfMonitors;
+  // const totalCost = (rows, columns, costOfMonitors) => (rows*columns) * costOfMonitors;
 
-  console.log(totalCost(5,4,200));
+  // console.log(totalCost(5,4,200));
     
+  // const arr = ['a','b','c','d','e','f','g']
+
+  // arr.splice(1,5,'l');
+
+  // console.log(arr);
+
+// const arr1 = [1, 2, 3];
+// const arr2 = [4, 5, 6];
+
+// const combine = [...arr1,...arr2];
+// console.log(combine);
+
+//findtotalof item = 2
+const arr = [1, 2, 3, 2, 4, 2, 5];
+const count = arr.filter(num => num === 2).length;
+console.log(count);
+
+
+
+//code Inw Touch findallindexnumber that match condition
+// const number = [1,2,3,1,1,7,8,9,1];
+
+// const findAllIndex = (arr, value) => {
+//   let temp = [];
+//   arr.forEach((e,i) => {
+//   if (e === value) {
+//     temp.push(i)
+//     }
+//   })
+//   return temp
+// }
+
+// console.log(findAllIndex(number, 1));
+
+// for (let i = 0; i <= 5; i++){
+//   console.log('hhh'+i);
+// }
+
