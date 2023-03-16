@@ -122,9 +122,9 @@
 // console.log(combine);
 
 //findtotalof item = 2
-const arr = [1, 2, 3, 2, 4, 2, 5];
-const count = arr.filter(num => num === 2).length;
-console.log(count);
+// const arr = [1, 2, 3, 2, 4, 2, 5];
+// const count = arr.filter(num => num === 2).length;
+// console.log(count);
 
 
 
@@ -143,7 +143,5 @@ console.log(count);
 
 // console.log(findAllIndex(number, 1));
 
-// for (let i = 0; i <= 5; i++){
-//   console.log('hhh'+i);
-// }
+
 
