@@ -142,6 +142,3 @@
 // }
 
 // console.log(findAllIndex(number, 1));
-
-
-
