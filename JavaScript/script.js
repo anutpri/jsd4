@@ -142,3 +142,24 @@
 // }
 
 // console.log(findAllIndex(number, 1));
+
+
+// const letters = ['a','b','c', 'd', 'a', 'c', 'a'];
+// let count = {}; //create empty object to keep track the count
+// letters.forEach(item =>{
+//     if (count[item]){ //check if we have an letter in
+//         count[item]++;
+//     }else{
+//         count[item] = 1;
+//     }
+// });
+// console.log(count);
+
+
+// const arr2 = [1, 2, 3, 4, 5];
+
+// const sum = arr2.reduce((a, c) => {
+//   return a + c;
+// });
+
+// console.log(sum);
