@@ -15,12 +15,12 @@ fruits.forEach(fruits => console.log('I want to eat a '+fruits));
 
 
 
-//.map compute all item in array start form index 0 by use callback function inside () then show in new array
+//.map compute all item in array start form index 0 by use callback function inside () then return in new array
 //executes the same code on every element in an array and returns a new array with the updated elements.
 const numbers = [1, 2, 3, 4, 5];
 
 const squareNumbers = numbers.map(number => {
-  return number * number;
+  return number + 1;
 });
 
 console.log(squareNumbers);
