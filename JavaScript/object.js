@@ -1,7 +1,7 @@
 
 const nickSkill = {
    
-    software: ['JS','HTML','CSS'],
+    Software: ['JS','HTML','CSS'],
     Hardware: ['Server', 'Switch', 'Firewall'],
     Systems: ['Vmware','Backups','Windows Server'],
     //Method to list all skills available
