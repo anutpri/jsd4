@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Revisit</title>
+    <style>
+      main {
+        border-color: blue;
+      }
+      .font-size-1 {
+        font-size: 80px;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="1">
+      <div class="logo">
+        <a href="https://google.com">Go To Google.com</a>
+      </div>
+    </header>
+    <!-- before: insert here -->
+    <main id="main">
+      <!-- selected element to insert -->
+      <!-- prepend: insert here -->
+      <div class="main-content">Main Cintent #1</div>
+      <div class="main-content">Main Content #2</div>
+      <form action="https://google.com" method="post">
+        <input name="username" id="username" value="" />
+        <input name="password" id="password" value="" />
+        <button type="submit">Click</button>
+        <button type="reset">Reset</button>
+      </form>
+      <!-- append: insert here -->
+    </main>
+    <!-- after: insert here -->
+    <footer>
+      <!-- <button onclick="alert('click footer')">Click Footer</button> -->
+      <button>Click Footer</button>
+    </footer>
+    <script>
+      const aEle = document.querySelector('a');
+      aEle.addEventListener('click', function (event) {
+        event.preventDefault();
+        alert('Oh my god');
+      });
+
+      // const cb = function (event) {
+      //   console.log('click form');
+      //   console.log(event);
+      // };
+      // const form = document.querySelector('form');
+      // form.addEventListener('click', cb); // browser execute cb(event)
+      // cb('abcde')
+
+      // const btn = document.querySelector('footer button');
+
+      // const handleFunc1 = function () {
+      //   alert('click button addEventListener#1');
+      // };
+
+      // btn.addEventListener('click', handleFunc1);
+
+      // btn.addEventListener('click', function (event) {
+      //   // alert('click button addEventListener#2');
+      //   console.log(event);
+      //   console.log(event.target);
+      // });
+
+      // btn.removeEventListener('click', handleFunc1);
+
+      // btn.addEventListener('click', function () {
+      //   alert('click button addEventListener#1');
+      // });
+
+      // btn.addEventListener('click', function () {
+      //   alert('click button addEventListener#2');
+      // });
+
+      // btn.removeEventListener('click', function () {
+      //   alert('click button addEventListener#1');
+      // });
+
+      // console.dir(btn);
+      // btn.onclick = function () {
+      //   console.dir(this);
+      //   // alert('click footer DOM property');
+      // };
+
+      // btn.onclick = function () {
+      //   console.log('second handler function');
+      // };
+
+      // setTimeout(function () {
+      //   btn.onclick = null;
+      // }, 10000);
+
+      // const header = document.querySelector('#\\31');
+      // console.log(header);
+
+      // const h1 = document.createElement('h1'); // <h1></h1>
+      // h1.innerHTML = 'Vanilla JavaScript'; // <h1>Vanilla JavaScript</h1>
+      // h1.style.color = 'red'; // <h1 style="color: red">Vanilla JavaScript</h1>
+      // h1.className = 'main-header font-size-1';
+
+      // const main = document.getElementById('main');
+      // main.append(h1);
+      // main.prepend(h1);
+      // main.before(h1);
+      // main.after(h1);
+      // main.insertAdjacentHTML(
+      //   'beforeend',
+      //   '<h1 style="color: red">Vanilla JavaScript</h1>'
+      // );
+
+      // main.style.border = '1px solid yellow';
+      // main.style.borderRadius = '12px';
+
+      // setTimeout(function () {
+      //   main.classList.add('hidden');
+      // }, 5000);
+
+      // setTimeout(function () {
+      //   // main.classList.remove('hidden');
+      //   main.classList.toggle('hidden');
+      // }, 10000);
+
+      // setTimeout(function () {
+      //   main.remove();
+      // }, 5000);
+
+      // const input = document.querySelector('input');
+      // input.value = 'Hello world';
+      // const div = document.querySelectorAll('div');
+      // console.dir(div);
+      // console.dir(div[1]);
+
+      // const main = document.getElementById('main');
+      // const input = main.querySelector('input');
+      // const input1 = main.getElementById('username');// Wrong
+
+      // const div = document.querySelector('.main-content');
+      // console.dir(div);
+      // console.log(div.innerHTML);
+      // const main = document.getElementById('main');
+      // console.dir(main);
+      // const listDiv = document.querySelectorAll('.main-content');
+      // console.dir(listDiv);
+
+      // const div = document.body.firstElementChild.firstElementChild;
+      // console.dir(div);
+      // // const main = document.body.firstElementChild.nextElementSibling;
+      // const button =
+      //   document.body.lastElementChild.previousElementSibling
+      //     .previousElementSibling.firstElementChild;
+      // console.log(button);
+      // button.innerHTML = 'Hello';
+    </script>
+  </body>
+</html>
