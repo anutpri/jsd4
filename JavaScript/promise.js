@@ -71,7 +71,7 @@ let order = (time, work) =>{ // work and time 2. customer order
 order(2000, () => console.log(`${stocks.coffee[0]} was selected`)) // 1. place order 2 second
 
 .then(()=>{ //no ; before then
-    return order(0000,()=>console.log('started making coffee')); //need to return 2. production started 0 seconds
+    return order(10000,()=>console.log('started making coffee')); //need to return 2. production started 0 seconds
 })
 
 .then(() =>{
