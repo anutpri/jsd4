@@ -1,9 +1,24 @@
+// import { express } from 'express'; //Need to input "type":"module" in package.json
 const express = require('express');
 const app = express();
 
 const userActivities = [];
 
 app.get('/', (req, res) => {
+    try {
+        
+               console.log('This is main page'+ {userActivities});
+                
+                
+                
+                
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+app.get('/Create', (req, res) => {
     try {
         const newUserActivity = {
             id: userActivities.length + 1,
@@ -23,6 +38,6 @@ app.get('/', (req, res) => {
     }
 });
 
-app.listen(8081, () => {
+app.listen(8082, () => {
     console.log('Server listening on port 8081');
 });
