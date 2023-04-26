@@ -4,14 +4,11 @@ const app = express();
 
 const userActivities = [];
 
-app.get('/', (req, res) => {
+app.get('/Main', (req, res) => {
     try {
         
-               console.log('This is main page'+ {userActivities});
-                
-                
-                
-                
+        res.send('This is Main');
+                 
     } catch (error) {
         console.error(error);
         res.status(500).send('Internal Server Error');
@@ -39,5 +36,5 @@ app.get('/Create', (req, res) => {
 });
 
 app.listen(8082, () => {
-    console.log('Server listening on port 8081');
+    console.log('Server listening on port 8082');
 });
