@@ -1,8 +1,8 @@
-// import { express } from 'express'; //Need to input "type":"module" in package.json
-const express = require('express');
+import express from 'express'; //Need to input "type":"module" in package.json
+// const express = require('express');
 const app = express();
-import {userActivities} from './mockDatabase';
-
+// const userActivities = require('./mockDatabase');
+import { userActivities } from './mockDatabase.js';
 
 
 //Wlidcard stype
