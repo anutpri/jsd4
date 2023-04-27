@@ -59,7 +59,7 @@ app.put('/:para/:activityID', (req, res) => {
     try {if (para === 'Edit'){
         if (activityIndex){
         const updateUserActivity = {
-            // id: userActivities.length,
+            id: activityID,
             activityName: 'Swim',
             description: 'Swim with your Mom',
             startDateTime: new Date(Date.now()),
