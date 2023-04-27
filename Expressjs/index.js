@@ -8,17 +8,17 @@ import { userActivities } from './mockDatabase.js';
 //Wlidcard stype
 app.get('/:para', (req, res) => {
     const {para} = req.params;
-    const activityData = userActivities.map(activity => `
-    ID: ${activity.id}
-    Activity Name: ${activity.activityName}
-    Description: ${activity.description}
-    Start Time: ${activity.startDateTime.toLocaleString()}
-    Finish Time: ${activity.finishDateTime.toLocaleString()}
-    Activity Type: ${activity.activityType}
-    Duration: ${activity.durationTime}
-    Distance: ${activity.distance}
-`);
+    
     try {if (para === 'Main'){
+        const activityData = userActivities.map(activity => `
+        ID: ${activity.id}
+        Activity Name: ${activity.activityName}
+        Description: ${activity.description}
+        Start Time: ${activity.startDateTime.toLocaleString()}
+        Finish Time: ${activity.finishDateTime.toLocaleString()}
+        Activity Type: ${activity.activityType}
+        Duration: ${activity.durationTime}
+        Distance: ${activity.distance}`);
         
         res.send(`All Activity : ${activityData}`);
 
