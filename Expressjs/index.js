@@ -87,14 +87,15 @@ app.delete('/:para/:activityID', (req, res) => {
     const {para,activityID} = req.params;
     const activityIndex = userActivities.findIndex((activity) => activity.id == activityID);
     try {if (para === 'Delete'){
-        if (activityIndex === -1){
-       
-       
-        res.status(404),res.send('Activity not exist');
-    };
-        userActivities[activityIndex] = null;
+        if (activityIndex){
+            
+        userActivities.splice(activityIndex, 1);
         res.send(`Your activity has been deleted`);
+       
         
+    };
+        
+        res.status(404),res.send('Activity not exist');
     }
 }
 
