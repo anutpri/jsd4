@@ -1,8 +1,9 @@
 // import { express } from 'express'; //Need to input "type":"module" in package.json
 const express = require('express');
 const app = express();
+import {userActivities} from './mockDatabase';
 
-const userActivities = [];
+
 
 //Wlidcard stype
 app.get('/:para', (req, res) => {
@@ -88,7 +89,7 @@ app.delete('/:para/:activityID', (req, res) => {
     const activityIndex = userActivities.findIndex((activity) => activity.id == activityID);
     try {if (para === 'Delete'){
         if (activityIndex){
-            
+
         userActivities.splice(activityIndex, 1);
         res.send(`Your activity has been deleted`);
        
