@@ -56,7 +56,8 @@ app.post('/:para', (req, res) => {
 app.put('/:para/:activityID', (req, res) => {
     const {para,activityID} = req.params;
     const activityIndex = userActivities.findIndex((activity) => activity.id == activityID);
-    try {if (activityIndex){
+    try {if (para === 'Edit'){
+        if (activityIndex){
         const updateUserActivity = {
             // id: userActivities.length,
             activityName: 'Swim',
@@ -66,16 +67,16 @@ app.put('/:para/:activityID', (req, res) => {
             activityType: 'Swim',
             durationTime: '20 minutes',
             distance: '0.5 KM'
-           
+        
         }
         userActivities[activityIndex] = updateUserActivity;
-        res.send(`Your Activity has been deleted`);
+        res.send(`Your activity has been updated`);
     };
        
         
         res.status(404),res.send('Activity not exist');
     }
-
+    }
     catch (error) {
         console.error(error);
         res.status(500).send('Internal Server Error');
@@ -85,14 +86,17 @@ app.put('/:para/:activityID', (req, res) => {
 app.delete('/:para/:activityID', (req, res) => {
     const {para,activityID} = req.params;
     const activityIndex = userActivities.findIndex((activity) => activity.id == activityID);
-    try {if (activityIndex){
-        userActivities[activityIndex] = null;
-        res.send(`Your Activity has been deleted`);
-    };
+    try {if (para === 'Delete'){
+        if (activityIndex === -1){
        
-        
+       
         res.status(404),res.send('Activity not exist');
+    };
+        userActivities[activityIndex] = null;
+        res.send(`Your activity has been deleted`);
+        
     }
+}
 
     catch (error) {
         console.error(error);
