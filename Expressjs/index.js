@@ -53,6 +53,35 @@ app.post('/:para', (req, res) => {
     }
 });
 
+app.put('/:para/:activityID', (req, res) => {
+    const {para,activityID} = req.params;
+    const activityIndex = userActivities.findIndex((activity) => activity.id == activityID);
+    try {if (activityIndex){
+        const updateUserActivity = {
+            // id: userActivities.length,
+            activityName: 'Swim',
+            description: 'Swim with your Mom',
+            startDateTime: new Date(Date.now()),
+            finishDateTime: new Date(Date.now() + 1800000),
+            activityType: 'Swim',
+            durationTime: '20 minutes',
+            distance: '0.5 KM'
+           
+        }
+        userActivities[activityIndex] = updateUserActivity;
+        res.send(`Your Activity has been deleted`);
+    };
+       
+        
+        res.status(404),res.send('Activity not exist');
+    }
+
+    catch (error) {
+        console.error(error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
 app.delete('/:para/:activityID', (req, res) => {
     const {para,activityID} = req.params;
     const activityIndex = userActivities.findIndex((activity) => activity.id == activityID);
@@ -93,6 +122,6 @@ app.delete('/:para/:activityID', (req, res) => {
 //     }
 // });
 
-app.listen(8084, () => {
-    console.log('Server listening on port 8084');
+app.listen(8080, () => {
+    console.log('Server listening on port 8080');
 });
