@@ -24,7 +24,7 @@ async function run() {
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
     const coll = client.db('FitbookDB').collection('User');
-    const result = await coll.insertOne({ email: 'test@gmail.com', name: 'John', password: 12345 });
+    // const result = await coll.insertOne({ email: 'test@gmail.com', name: 'John', password: 12345 });
     const docs = await coll.find().toArray();
     console.log(docs);
   } finally {
