@@ -1,8 +1,7 @@
-import dotenv from 'dotenv';
 import { MongoClient, ServerApiVersion } from 'mongodb';
 
 
-dotenv.config();
+
 const apiKey = 'admin:Atlasfitbook';
 const uri = `mongodb+srv://${apiKey}@cluster0.erdzem4.mongodb.net/?retryWrites=true&w=majority`;
 
