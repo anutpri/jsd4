@@ -1,6 +1,6 @@
 
 import { MongoClient, ServerApiVersion } from 'mongodb';
-const uri = "mongodb+srv://admin:Atlasfitbook@cluster0.erdzem4.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://${{ secrets.Fitbook_API }}@cluster0.erdzem4.mongodb.net/?retryWrites=true&w=majority";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
