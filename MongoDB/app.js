@@ -1,9 +1,12 @@
 import { MongoClient, ServerApiVersion } from 'mongodb';
+import dotenv from 'dotenv';
+dotenv.config({ path: './api.env' });
 
 
 
-const apiKey = 'admin:Atlasfitbook';
-const uri = `mongodb+srv://${apiKey}@cluster0.erdzem4.mongodb.net/?retryWrites=true&w=majority`;
+const username = process.env.API_USERNAME;
+const password = process.env.API_PASSWORD;
+const uri = `mongodb+srv://${username}:${password}@cluster0.erdzem4.mongodb.net/?retryWrites=true&w=majority`;
 
 
 
