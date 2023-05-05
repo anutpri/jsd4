@@ -3,8 +3,8 @@ import { MongoClient, ServerApiVersion } from 'mongodb';
 
 
 dotenv.config();
-const apiKey = process.env.API_KEY;
-const uri = `mongodb+srv://${encodeURIComponent(apiKey)}@cluster0.erdzem4.mongodb.net/?retryWrites=true&w=majority`;
+const apiKey = 'admin:Atlasfitbook';
+const uri = `mongodb+srv://${apiKey}@cluster0.erdzem4.mongodb.net/?retryWrites=true&w=majority`;
 
 
 
