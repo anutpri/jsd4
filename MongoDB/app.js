@@ -4,10 +4,10 @@ dotenv.config({ path: './api.env' });
 
 
 
-const username = process.env.API_USERNAME;
-const password = process.env.API_PASSWORD;
-const uri = `mongodb+srv://${username}:${password}@cluster0.erdzem4.mongodb.net/?retryWrites=true&w=majority`;
-
+// const username = process.env.API_USERNAME;
+// const password = process.env.API_PASSWORD;
+// const uri = `mongodb+srv://${username}:${password}@cluster0.erdzem4.mongodb.net/?retryWrites=true&w=majority`;
+const uri = process.env.MongoDB;
 
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
