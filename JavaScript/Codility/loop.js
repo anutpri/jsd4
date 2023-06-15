@@ -1,28 +1,73 @@
+// This is a demo task.
+
+// Write a function:
+
+// function solution(A);
+
+// that, given an array A of N integers, returns the smallest positive integer (greater than 0) that does not occur in A.
+
+// For example, given A = [1, 3, 6, 4, 1, 2], the function should return 5.
+
+// Given A = [1, 2, 3], the function should return 4.
+
+// Given A = [−1, −3], the function should return 1.
+
+// Write an efficient algorithm for the following assumptions:
+
+// N is an integer within the range [1..100,000];
+// each element of array A is an integer within the range [−1,000,000..1,000,000].
+
+
 function solution(A) {
-    const n = A.length;
-    const countSet = new Set();
-  
-    // Mark the presence of positive integers in the set
-    for (let i = 0; i < n; i++) {
-      const num = A[i];
-      
-      if (num > 0) {
-        countSet.add(num);
-        
+  // Implement your solution here
+  let n = A.length;
+  let newA = [];
+
+  for (let i = 0; i < n; i++){
+      if (A[i]>0){
+          newA.push(A[i]);
       }
-      
-    }
-    // const setArray = Array.from(countSet);
-    // console.log(setArray);
-  console.log(countSet);
-  
-    // Find the smallest positive integer not present in the set
-    for (let i = 1; i <= n + 1; i++) {
-      if (!countSet.has(i)) {
-        return i;
-      }
-    }
   }
+  
+  let result = '';
+  for (let i = 1; i <= newA.length + 1; i++){
+      if(!newA.includes(i)){
+          result = i;
+          break;
+      }
+  }
+return result;
+}
+
+
+
+
+
+// function solution(A) {
+//     const n = A.length;
+//     const countSet = new Set();
+  
+//     // Mark the presence of positive integers in the set
+//     for (let i = 0; i < n; i++) {
+//       const num = A[i];
+      
+//       if (num > 0) {
+//         countSet.add(num);
+        
+//       }
+      
+//     }
+//     // const setArray = Array.from(countSet);
+//     // console.log(setArray);
+//   console.log(countSet);
+  
+//     // Find the smallest positive integer not present in the set
+//     for (let i = 1; i <= n + 1; i++) {
+//       if (!countSet.has(i)) {
+//         return i;
+//       }
+//     }
+//   }
 
 
   
@@ -71,6 +116,6 @@ function solution(A) {
 //             }
 // }
 
-    const A = [7,-2,0,1,2,3,4,6,-3];
+    const A = [1, 2, 3];
     console.log(solution(A));
   
